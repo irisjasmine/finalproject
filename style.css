@@ -1,0 +1,284 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+.battery-container {
+  color: rgb(0, 0, 0);
+  padding-top: 10px;
+  position: inherit;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  padding-left: 50px;
+  padding-top: 50px;
+}
+/* 
+#clock {
+  color: white;
+  font-size: large;
+  color: rgb(0, 0, 0);
+  padding-top: 10px;
+  position: inherit;
+  top: 50%;
+  left: 50%;
+  padding-left: 0px;
+  padding-top: 0px;
+} */
+
+#battery {
+  box-sizing: content-box;
+  height: 15px;
+  width: 25px;
+  border: 2px solid #ffffff;
+  margin: auto;
+  border-radius: 1px;
+  position: relative;
+  display: grid;
+  place-items: center;
+}
+
+#battery::before {
+  position: absolute;
+  content: "";
+  height: 15px;
+  width: 5px;
+  background-color: #ffffff;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  right: -5px;
+  border-radius: 0 1px 1px 0;
+}
+
+#charge {
+  position: absolute;
+  height: 12px;
+  width: 22px;
+  background-color: #ffffff;
+  top: 1px;
+  left: 1px;
+  color: rgb(7, 53, 22);
+}
+
+#charge-level {
+  position: absolute;
+  font-size: 10px;
+  font-weight: 500;
+  color: rgb(19, 8, 42);
+}
+
+#charging-time {
+  text-align: center;
+  font-size: 10px;
+  margin-top: 10px;
+  color: rgb(19, 8, 42);
+}
+
+.active {
+  animation: charge-animation 1s infinite linear;
+}
+
+@keyframes charge-animation {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 20px;
+  }
+}
+
+.os-container {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+  color: #ffffff;
+  text-align: center;
+}
+
+.os-container p {
+  font-family: "Montserrat", sans-serif;
+  color: #ffffff;
+  text-align: center;
+}
+
+#clock {
+  color: white;
+  font-size: x-small;
+  padding-left: 55px;
+}
+
+body {
+  background-color: #1a0835;
+}
+.container {
+  background-color: #ffffff;
+  font-size: 16px;
+  padding: 48px 45px;
+  width: 90vw;
+  max-width: 515;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 50%;
+  border-radius: 10px;
+}
+.search-container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 9fr 3fr;
+  gap: 19px;
+}
+.search-container input {
+  font-size: 16px;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: none;
+  outline: none;
+  border-bottom: 2px solid rgba(128, 128, 128, 0.715);
+}
+.search-container button {
+  font-size: 16px;
+  background-color: #14032d;
+  border: none;
+  font-weight: 600;
+  border-radius: 5px;
+  color: white;
+}
+img {
+  display: block;
+  width: 50%;
+  margin: 28px auto 0 auto;
+}
+#search-btn:hover {
+  cursor: pointer;
+}
+
+.details {
+  background-color: #ffffff82;
+  position: relative;
+  margin: -67px 0 0 0;
+  text-align: center;
+  padding: 10px 0;
+}
+.details h2 {
+  font-size: 19px;
+  font-weight: 600;
+}
+.details h4 {
+  font-size: 16px;
+  font-weight: 400;
+}
+#show-recipe > #result {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+#show-recipe {
+  font-size: 16px;
+  position: relative;
+  left: 75%;
+  padding: 14px 10px;
+  background-color: #14032d;
+  border: none;
+  top: 24px;
+  border-radius: 5px;
+  font-weight: 600;
+  color: white;
+}
+#show-recipe:hover {
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+  color: #14032d;
+}
+
+#available-recipes :hover {
+  text-decoration: none;
+  cursor: pointer;
+  color: #3c0f7e;
+}
+
+#available-recipes {
+  margin: 15px;
+}
+#recipe {
+  position: absolute;
+  background-color: #ffffff;
+  min-height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  border-radius: 10px;
+  display: none;
+}
+#recipe pre {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  padding: 40px 19px 19px 19px;
+  font-size: 14px;
+  color: rgb(123, 104, 167);
+}
+#no-recipe {
+  font-size: 16px;
+  position: relative;
+  width: 28px;
+  height: 28px;
+  background-color: #ffffff;
+  border: none;
+  top: 19px;
+  left: 0%;
+  border-radius: 5px;
+  padding-top: 20px;
+}
+
+#no-recipe:hover {
+  cursor: pointer;
+}
+#hide-recipe {
+  font-size: 16px;
+  position: relative;
+  width: 28px;
+  height: 28px;
+  background-color: #ffffff;
+  border: none;
+  top: 19px;
+  left: 90%;
+  border-radius: 5px;
+  padding-top: 20px;
+}
+
+#hide-recipe:hover {
+  cursor: pointer;
+}
+
+ul {
+  font-size: 16px;
+  position: relative;
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 13px 17px;
+  padding: 19px 0 0 19px;
+  color: #303040;
+  text-transform: capitalize;
+}
+
+h3 {
+  text-align: center;
+  margin-top: 28px;
+  color: #202030;
+}
+@media screen and (max-width: 500px) {
+  .container {
+    font-size: 14px;
+  }
+}
